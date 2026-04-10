@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creator Hub — Jae's IDP Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="progress-bar"></div>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#hero" class="nav-logo"><span>Creator</span>Hub</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#tasks">Tasks</a></li>
+      <li><a href="#ideation">Ideation</a></li>
+      <li><a href="#prototyping">Prototyping</a></li>
+      <li><a href="#integration">Integration</a></li>
+      <li><a href="#ai-design">AI Design</a></li>
+      <li><a href="#evaluation">Evaluation</a></li>
+      <li><a href="#reflection">Reflection</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-badge">CS3240 Individual Portfolio</div>
+    <h1>Creator Hub</h1>
+    <p>Designing a friend-centered community layer for PropBank — where cosplayers share memories, discover inspiration, and connect around the events that matter.</p>
+    <div class="hero-meta">Jae (Kim Jaehyeok) &middot; A0245215M &middot; T6 Group 5 &middot; AY2025/26 S2</div>
+  </div>
+  <div class="scroll-indicator">&#8964;</div>
+</section>
+
+<!-- ===== SECTION 1: OVERVIEW ===== -->
+<section class="section" id="overview">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">01 / Overview</div>
+      <h2 class="section-title">Service Overview &amp; Problem Definition</h2>
+      <p class="section-subtitle">Creator Hub is the social layer of PropBank — a lightweight community space designed for sharing, not self-promotion.</p>
+    </div>
+
+    <div class="fade-in">
+      <h3>What is PropBank?</h3>
+      <p>PropBank is a cosplay and ACGN preparation platform that helps users discover events, source cosplay items with trust, access practical guides, and connect with the community — all within one integrated ecosystem. It consists of five services: <strong>CoNews</strong> (event discovery), <strong>Gear Library &amp; Marketplace</strong> (buy/sell/rent cosplay items), <strong>Workshop</strong> (tutorials and guides), <strong>PropScan</strong> (AI-powered prop identification), and <strong>Creator Hub</strong> (community sharing).</p>
+    </div>
+
+
+    <div class="fade-in">
+      <h3>What is Creator Hub?</h3>
+      <p>Creator Hub is a social, informal, community-generated sharing space within PropBank. Unlike Workshop (which is structured and instructional), Creator Hub is designed for casual sharing — convention photos, cosplay progress shots, event memories, and community inspiration.</p>
+      <p>But it is <em>not</em> another social media app. Our research made that clear.</p>
+    </div>
+
+    <div class="fade-in">
+      <h3>The Problem</h3>
+      <p>Our user research revealed that cosplayers <em>do</em> want a community space, but their needs are fundamentally different from what mainstream social platforms offer. They want to share with friends, not build audiences. They want content grouped by events, not sorted by algorithms. And they want moderation built into the platform, not left to individual users.</p>
+    </div>
+
+    <div class="quote fade-in">
+      <p>"Friend posts are usually more important. It should predominantly feature friend stuff first, then random related ones."</p>
+      <cite>— Interview participant (User K)</cite>
+    </div>
+
+    <div class="quote fade-in">
+      <p>"I will immediately mute notifications on this app... except Convention News."</p>
+      <cite>— Interview participant (User T)</cite>
+    </div>
+
+    <div class="quote fade-in">
+      <p>"Album feature that allows you to ping or link other Cosplayers and group into events or Cons."</p>
+      <cite>— Interview participant (User K)</cite>
+    </div>
+
+    <div class="fade-in">
+      <h3>Design Positioning</h3>
+      <p><strong>Creator Hub is a friend-first, event-linked community space that supports the PropBank ecosystem without trying to become another social media app.</strong> It prioritizes lightweight sharing, friend connections, event-grouped memories, and platform-enforced moderation — all while integrating seamlessly with the rest of PropBank.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SECTION 2: USER RESEARCH ===== -->
+<section class="section" id="research">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">02 / User Research</div>
+      <h2 class="section-title">Understanding Our Users</h2>
+      <p class="section-subtitle">Semi-structured interviews with 3 participants revealed clear patterns about what cosplayers actually want from a community platform.</p>
+    </div>
+
+    <div class="fade-in">
+      <h3>Research Method</h3>
+      <p>We conducted semi-structured interviews with three participants who had recently engaged with cosplay or ACGN events. Participants were purposively selected based on inclusion criteria (recent cosplay or convention participation within the past year). The interviews probed for pain points across event discovery, cosplay sourcing, learning resources, and community sharing — without revealing our planned features.</p>
+    </div>
+
+    <div class="fade-in">
+      <h3>Affinity Diagram</h3>
+      <p>We organized all raw interview statements into an affinity diagram, clustering them into five themes: <strong>Procuring Cosplay</strong>, <strong>Finding Events</strong>, <strong>Making Cosplay</strong>, <strong>Socializing</strong>, and <strong>AI</strong>. The Socializing theme was most directly relevant to Creator Hub's design direction.</p>
+    </div>
+
+    <div class="figma-embed fade-in">
+      <iframe style="border: none;" width="100%" height="500" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fboard%2FXB1leBFxdkjW6jwS1LZMzj%2FAffinity-Diagrams%3Fnode-id%3D401-54" allowfullscreen loading="lazy"></iframe>
+      <p style="font-size: 0.8125rem; color: var(--text-muted); text-align: center; padding: 0.75rem;">Affinity diagram — user research statements grouped into themes. The "Socializing" column (rightmost) directly informed Creator Hub's design.</p>
+    </div>
+
+    <div class="fade-in">
+      <h3>Key Findings Relevant to Creator Hub</h3>
+    </div>
+
+    <div class="insight-card fade-in">
+      <div class="insight-number">Finding 01</div>
+      <h4>Community sharing is a lower-priority feature than utility features</h4>
+      <p>Users consistently valued event discovery and marketplace features more than social posting. One participant explicitly avoids posting for privacy reasons. This means Creator Hub must be lightweight — it should support the ecosystem, not try to dominate it.</p>
+      <div class="so-what">Design decision &rarr; Keep Creator Hub minimal. Don't build a full social media platform.</div>
+    </div>
+
+    <div class="insight-card fade-in">
+      <div class="insight-number">Finding 02</div>
+      <h4>Friend-centered, not feed-centered</h4>
+      <p>Users want to see their friends' content first. They already "doomscroll enough elsewhere" and prefer active search over recommendation-heavy feeds. One participant said friend posts are "usually more important" than algorithmic content.</p>
+      <div class="so-what">Design decision &rarr; Default feed shows friends' posts chronologically. Discovery is opt-in via a separate Explore tab.</div>
+    </div>
+
+    <div class="insight-card fade-in">
+      <div class="insight-number">Finding 03</div>
+      <h4>Event-linked grouping is desired</h4>
+      <p>Users want to tag posts to specific conventions and group photos by event — like Instagram highlights, but for shared convention memories. This creates a natural connection between Creator Hub and CoNews.</p>
+      <div class="so-what">Design decision &rarr; Posts can be tagged to CoNews events, creating browsable event albums.</div>
+    </div>
+
+    <div class="insight-card fade-in">
+      <div class="insight-number">Finding 04</div>
+      <h4>Moderation is essential</h4>
+      <p>NSFW content and drama are real concerns in cosplay communities. Users don't want to manage moderation themselves — they expect the platform to handle it.</p>
+      <div class="so-what">Design decision &rarr; Platform-enforced moderation. NSFW flagging built into the upload flow.</div>
+    </div>
+
+    <div class="insight-card fade-in">
+      <div class="insight-number">Finding 05</div>
+      <h4>Notification control is non-negotiable</h4>
+      <p>At least one user said they would mute everything except event news. Recommendation notifications feel like spam. Users want to know when a friend tags them — not when the algorithm has a suggestion.</p>
+      <div class="so-what">Design decision &rarr; Granular notification categories: Friends, Explore, System — each independently controllable.</div>
+    </div>
+
+    <div class="fade-in">
+      <h3>User Persona</h3>
+    </div>
+
+    <div class="persona-card fade-in">
+      <div class="persona-avatar" style="padding:0; border:none; overflow:hidden;">
+        <img src="assets/images/kai-persona.png" alt="Kai Ng persona photo" style="width:100%; height:100%; object-fit:cover; border-radius: var(--radius);">
+      </div>
+      <div class="persona-info">
+        <h4>Kai Ng</h4>
+        <div class="persona-meta">22 years old &middot; University Student &middot; Casual cosplayer &amp; convention-goer</div>
+        <div class="persona-section">
+          <h5>Background</h5>
+          <p>Kai goes to 4–5 conventions a year and cosplays at about half of them. After each event, he takes photos and wants somewhere to share them with friends — not a full photoshoot, just casual group memory-keeping. He has Instagram but finds it too public. He's the person in his friend group who keeps track of who's going to what. He's not trying to build an audience.</p>
+        </div>
+        <div class="persona-section">
+          <h5>Goals</h5>
+          <ul>
+            <li>Share event photos with the specific group he attended with, grouped by event</li>
+            <li>Stay aware of what his cosplay friends are up to without switching apps</li>
+            <li>Browse cosplay inspiration on his own terms, not because an algorithm pushes it</li>
+            <li>Control how much noise the app throws at him</li>
+          </ul>
+        </div>
+        <div class="persona-section">
+          <h5>Pain Points</h5>
+          <ul>
+            <li>Instagram is too public; photos get mixed with everything else</li>
+            <li>No good way to group photos by event or shared context</li>
+            <li>NSFW content and drama surface in niche cosplay communities</li>
+            <li>Apps that send constant notifications get muted, causing him to miss things he cares about</li>
+          </ul>
+        </div>
+        <div class="persona-section">
+          <h5>Needs from Creator Hub</h5>
+          <ul>
+            <li>Event-linked albums for grouping photos by convention</li>
+            <li>Friend-first feed as the default view</li>
+            <li>Easy friend tagging in posts</li>
+            <li>Granular notification controls</li>
+            <li>Platform-enforced moderation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <h3>User Journey Map</h3>
+      <p>Kai's journey: <em>"Sharing Convention Memories Without Losing Control"</em></p>
+    </div>
+
+    <div class="figma-embed fade-in">
+      <iframe style="border: none;" width="100%" height="500" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fboard%2FDJ6j2odtzl0O2O6jIWjYoe%2FCS3240-user-journey-map%3Fnode-id%3D2252-1236" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: USER TASKS ===== -->
+<section class="section" id="tasks">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">03 / User Tasks</div>
+      <h2 class="section-title">End-to-End Task Flows</h2>
+      <p class="section-subtitle">Three core user tasks define the Creator Hub experience, each designed around the persona's goals and research findings.</p>
+    </div>
+
+    <!-- Task 1 -->
+    <div class="task-block fade-in">
+      <div class="task-number">Task 4.1</div>
+      <h4>Share Cosplay / Prop Content</h4>
+      <p>The user returns from a convention and wants to share photos with friends, tagged to the event and enriched with AI-suggested tags.</p>
+
+      <div class="task-context">
+        <div class="task-context-item">
+          <strong>Trigger</strong>
+          Post-event. User has convention photos to share.
+        </div>
+        <div class="task-context-item">
+          <strong>Context</strong>
+          Anywhere, on mobile.
+        </div>
+        <div class="task-context-item">
+          <strong>Success Criteria</strong>
+          Post created and visible to tagged friends within the event album.
+        </div>
+      </div>
+
+      <h4>Task Flow</h4>
+      <ol class="task-steps">
+        <li data-step="1">Open Creator Hub from navbar</li>
+        <li data-step="2">Tap "Create Post" (FAB button)</li>
+        <li data-step="3">Select content type (photo / video)</li>
+        <li data-step="4">Upload media from gallery or camera</li>
+        <li data-step="5">Add caption and tags (character name, series, event)</li>
+        <li data-step="6">Tag collaborators (cosplayer, photographer, prop maker)</li>
+        <li data-step="7">Review AI auto-suggested tags from PropScan</li>
+        <li data-step="8">Set visibility (public / friends only / private)</li>
+        <li data-step="9">Review and publish</li>
+      </ol>
+
+      <div class="figma-embed">
+        <iframe style="border: none;" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fboard%2FQFptdIlN7hds8GXeMgOJA3%2FCS3240-workflow-diragram%3Fnode-id%3D2245-994" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <!-- Task 2 -->
+    <div class="task-block fade-in">
+      <div class="task-number">Task 4.2</div>
+      <h4>Browse and Interact with Friend &amp; Event Content</h4>
+      <p>The user opens Creator Hub to see what cosplay friends are up to, interact with posts, and curate content into collections.</p>
+
+      <div class="task-context">
+        <div class="task-context-item">
+          <strong>Trigger</strong>
+          Idle browsing / checking in on friends.
+        </div>
+        <div class="task-context-item">
+          <strong>Context</strong>
+          Casual use, anywhere.
+        </div>
+        <div class="task-context-item">
+          <strong>Success Criteria</strong>
+          User finds relevant friend content without algorithmic noise.
+        </div>
+      </div>
+
+      <h4>Task Flow</h4>
+      <ol class="task-steps">
+        <li data-step="1">Open Creator Hub from navbar</li>
+        <li data-step="2">Feed loads with friend-first content</li>
+        <li data-step="3">Browse general feed or search for event name</li>
+        <li data-step="4">Click on event collection or continue scrolling</li>
+        <li data-step="5">Tap a post to view in detail</li>
+        <li data-step="6">Like, comment, or just view</li>
+        <li data-step="7">View tagged collaborators, event tags, linked workshops</li>
+        <li data-step="8">Optionally add post to a collection</li>
+      </ol>
+
+      <div class="figma-embed">
+        <iframe style="border: none;" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fboard%2FQFptdIlN7hds8GXeMgOJA3%2FCS3240-workflow-diragram%3Fnode-id%3D2251-1300" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <!-- Task 3 -->
+    <div class="task-block fade-in">
+      <div class="task-number">Task 4.3</div>
+      <h4>Discover and Follow Creators</h4>
+      <p>The user discovers new cosplay creators through search or recommendations, evaluates their credibility across the ecosystem, and follows those who inspire them.</p>
+
+      <div class="task-context">
+        <div class="task-context-item">
+          <strong>Trigger</strong>
+          Seeking inspiration or new content.
+        </div>
+        <div class="task-context-item">
+          <strong>Context</strong>
+          Browsing mode, not task-driven.
+        </div>
+        <div class="task-context-item">
+          <strong>Success Criteria</strong>
+          User follows a creator whose posts appear in their friend-first feed.
+        </div>
+      </div>
+
+      <h4>Task Flow</h4>
+      <ol class="task-steps">
+        <li data-step="1">Open Creator Hub and tap Search or browse feed</li>
+        <li data-step="2">Enter search query or browse recommended creators</li>
+        <li data-step="3">View search results (posts and creator profiles)</li>
+        <li data-step="4">Tap on a creator's profile</li>
+        <li data-step="5">View their post history and portfolio</li>
+        <li data-step="6">Check cross-service reputation (Gear Lib reviews, Workshop contributions)</li>
+        <li data-step="7">View last active date and posting activity</li>
+        <li data-step="8">Decide: Follow or return to browsing</li>
+        <li data-step="9">Creator's posts now appear in feed; optionally send a message</li>
+      </ol>
+
+      <div class="figma-embed">
+        <iframe style="border: none;" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fboard%2FQFptdIlN7hds8GXeMgOJA3%2FCS3240-workflow-diragram%3Fnode-id%3D2281-1325" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: IDEATION ===== -->
+<section class="section" id="ideation">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">04 / Ideation</div>
+      <h2 class="section-title">Exploring Directions</h2>
+      <p class="section-subtitle">From research insights to design decisions — how we went from "what users need" to "what Creator Hub should look like."</p>
+    </div>
+
+    <div class="fade-in">
+      <h3>How Might We...</h3>
+      <div class="card-grid">
+        <div class="card">
+          <p>"How might we help users share convention memories without it feeling like 'another social media app'?"</p>
+        </div>
+        <div class="card">
+          <p>"How might we surface friend content first while still enabling broader discovery?"</p>
+        </div>
+        <div class="card">
+          <p>"How might we integrate PropScan AI into post creation without being intrusive?"</p>
+        </div>
+        <div class="card">
+          <p>"How might we connect Creator Hub posts to specific events across the ecosystem?"</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <h3>Key Design Decisions</h3>
+
+      <div class="insight-card">
+        <h4>Friend-first feed vs. algorithmic feed</h4>
+        <p>We chose a chronological friend-first feed as the default, with a separate "Explore" tab for broader discovery. This directly addresses the research finding that users prefer active search over algorithmic content pushing.</p>
+      </div>
+
+      <div class="insight-card">
+        <h4>Image-forward post format</h4>
+        <p>We chose large image cards over text-heavy post formats. The cosplay community is inherently visual — photos of costumes, props, and events are the primary content type. This also aligns with the group design system principle of being "image-led."</p>
+      </div>
+
+      <div class="insight-card">
+        <h4>Event-linked posts via CoNews tags</h4>
+        <p>Rather than building a separate album feature, we chose a tag-based linking system where posts reference CoNews events. This creates browsable event collections naturally and strengthens the ecosystem integration.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== SECTION 5: PROTOTYPING ===== -->
+<section class="section" id="prototyping">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">05 / Prototyping</div>
+      <h2 class="section-title">From Wireframes to Hi-Fi</h2>
+      <p class="section-subtitle">Iterating from lo-fi structure to a polished prototype that applies the shared PropBank design system.</p>
+    </div>
+
+    <div class="fade-in">
+      <h3>Lo-fi Wireframes</h3>
+      <p>The lo-fi prototype established the information architecture and core interaction flows across 10 screens. Focus was on structure and logic before visual polish.</p>
+    </div>
+
+    <div class="figma-embed fade-in">
+      <iframe style="border: none;" width="100%" height="500" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FRb3NBiOCgCPaXdcylqQa3L%2FPropbank-playground%3Fnode-id%3D298-3941" allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <div class="fade-in" style="margin-top: 1.5rem;">
+      <p><a href="https://www.figma.com/design/Rb3NBiOCgCPaXdcylqQa3L/Propbank-playground?node-id=298-3941&t=7F9lXtiRcUwOkM6e-1" target="_blank">View Lo-fi wireframes in Figma &rarr;</a></p>
+    </div>
+
+    <div class="fade-in">
+      <h3>Design System</h3>
+      <p>Creator Hub follows the shared PropBank design system — a "Beige Theme" with consistent typography, color palette, components (CTA buttons, search bars, filter chips, snackbars), and navigation patterns. This ensures visual coherence across all five services.</p>
+    </div>
+
+    <div class="figma-embed fade-in">
+      <iframe style="border: none;" width="100%" height="500" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FRb3NBiOCgCPaXdcylqQa3L%2FPropbank-playground%3Fnode-id%3D2-23" allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <div class="fade-in">
+      <h3>Lo-fi to Hi-fi: What Changed and Why</h3>
+    </div>
+
+    <div class="comparison fade-in">
+      <div class="comparison-item">
+        <div class="label before">Lo-fi</div>
+        <p>Basic wireframe post cards with placeholder content and minimal visual hierarchy.</p>
+        <div class="figma-embed"><iframe style="border: none;" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FRb3NBiOCgCPaXdcylqQa3L%2FPropbank-playground%3Fnode-id%3D300-3942" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="comparison-item">
+        <div class="label after">Hi-fi</div>
+        <p>Applied the Beige Theme with proper typography, avatar components, tag chips, and the shared bottom navigation bar.</p>
+        <div class="figma-embed"><iframe style="border: none;" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FRb3NBiOCgCPaXdcylqQa3L%2FPropbank-playground%3Fnode-id%3D287-3001" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+
+    <div class="comparison fade-in">
+      <div class="comparison-item">
+        <div class="label before">Lo-fi</div>
+        <p>Create Post flow had basic text fields without AI integration.</p>
+        <div class="figma-embed"><iframe style="border: none;" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FRb3NBiOCgCPaXdcylqQa3L%2FPropbank-playground%3Fnode-id%3D300-4030" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="comparison-item">
+        <div class="label after">Hi-fi</div>
+        <p>Added PropScan AI tag suggestion UI ("AI Suggested Tags") as dismissible chips below manual tags. Added the 3-step progress indicator.</p>
+        <div class="figma-embed"><iframe style="border: none;" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FRb3NBiOCgCPaXdcylqQa3L%2FPropbank-playground%3Fnode-id%3D287-3165" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+
+    <div class="comparison fade-in">
+      <div class="comparison-item">
+        <div class="label before">Lo-fi</div>
+        <p>Creator Profile with basic placeholder layout.</p>
+        <div class="figma-embed"><iframe style="border: none;" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FRb3NBiOCgCPaXdcylqQa3L%2FPropbank-playground%3Fnode-id%3D399-1139" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="comparison-item">
+        <div class="label after">Hi-fi</div>
+        <p>Added cross-service reputation display (Gear Lib rating, Workshop guides published, last active), follow/message CTAs, and post grid.</p>
+        <div class="figma-embed"><iframe style="border: none;" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FRb3NBiOCgCPaXdcylqQa3L%2FPropbank-playground%3Fnode-id%3D399-655" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <h3>Hi-fi Prototype Screens</h3>
+      <p>The final hi-fi prototype implements all three user tasks with full visual design, interaction patterns, and ecosystem integration points.</p>
+    </div>
+
+    <div class="figma-embed fade-in">
+      <iframe style="border: none;" width="100%" height="500" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FRb3NBiOCgCPaXdcylqQa3L%2FPropbank-playground%3Fnode-id%3D124-367" allowfullscreen loading="lazy"></iframe>
+    </div>
+
+    <div class="fade-in" style="margin-top: 1.5rem;">
+      <p><a href="https://www.figma.com/proto/Rb3NBiOCgCPaXdcylqQa3L/Propbank-playground?node-id=287-3001&p=f&t=85TfNSCmEbymDe0l-0&scaling=min-zoom&content-scaling=fixed&page-id=124%3A367&starting-point-node-id=287%3A3001" target="_blank">View interactive Figma prototype &rarr;</a></p>
+    </div>
+
+    <div class="fade-in">
+      <h3>Shared Utility: Settings &amp; Profile Pages</h3>
+      <p>Beyond Creator Hub, I also designed the <strong>Settings and Profile pages</strong> as shared utilities used across the entire PropBank ecosystem. These include My Profile (display name, bio, reputation score, activity history), and Account Settings (password, email, linked accounts, notification preferences, privacy, content visibility, data export).</p>
+    </div>
+
+    <div class="comparison fade-in">
+      <div class="comparison-item">
+        <div class="label before">Lo-fi</div>
+        <p>Wireframe structure for profile and settings screens with basic field layout.</p>
+        <div class="figma-embed"><iframe style="border: none;" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FRb3NBiOCgCPaXdcylqQa3L%2FPropbank-playground%3Fnode-id%3D422-1580" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <div class="comparison-item">
+        <div class="label after">Hi-fi</div>
+        <p>Applied the design system with grouped settings categories (Account, Preferences, Data &amp; Storage), reputation score display pulling cross-service data, and activity history feed.</p>
+        <div class="figma-embed"><iframe style="border: none;" width="100%" height="600" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FRb3NBiOCgCPaXdcylqQa3L%2FPropbank-playground%3Fnode-id%3D422-1426" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 6: INTEGRATION ===== -->
+<section class="section" id="integration">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">06 / Service Integration</div>
+      <h2 class="section-title">Connecting to the Ecosystem</h2>
+      <p class="section-subtitle">Creator Hub doesn't exist in isolation — it's deeply connected to every other PropBank service through deliberate integration points.</p>
+    </div>
+
+    <div class="integration-grid fade-in">
+      <div class="integration-card">
+        <div class="flow-label">CreatorHub &harr; CoNews</div>
+        <h4>Event-Linked Content</h4>
+        <p>Users tag posts to CoNews events, creating browsable event albums. CoNews event pages have a "Community Posts" tab showing Creator Hub content tagged to that event. Friends' posts are surfaced first.</p>
+      </div>
+      <div class="integration-card">
+        <div class="flow-label">CreatorHub &harr; Marketplace</div>
+        <h4>Product Linking</h4>
+        <p>Posts can embed mini product cards from the Marketplace. Seeing a prop in a post can link directly to its marketplace listing for purchase or rental.</p>
+      </div>
+      <div class="integration-card">
+        <div class="flow-label">CreatorHub &harr; Workshop</div>
+        <h4>Guide Connections</h4>
+        <p>Users can tag a Workshop guide they followed to create a specific prop or look. Viewers tap the tag to jump directly to the tutorial. High-quality creator content can inspire new Workshop guides.</p>
+      </div>
+      <div class="integration-card">
+        <div class="flow-label">PropScan &rarr; CreatorHub</div>
+        <h4>AI Tag Suggestions</h4>
+        <p>During post creation, PropScan analyzes uploaded images and suggests relevant tags (character names, prop types, events). This is the AI integration point for Creator Hub.</p>
+      </div>
+      <div class="integration-card">
+        <div class="flow-label">CreatorHub &rarr; Profile</div>
+        <h4>Portable Reputation</h4>
+        <p>Creator Hub activity (posts, followers, engagement) contributes to the user's unified PropBank reputation, visible across all services. Creator profiles display cross-service metrics.</p>
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <h3>Entry &amp; Exit Points</h3>
+    </div>
+
+    <table class="flow-table fade-in">
+      <thead>
+        <tr>
+          <th>Direction</th>
+          <th>From / To</th>
+          <th>Mechanism</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Entry</strong></td>
+          <td>Bottom navigation bar</td>
+          <td>"Social" tab in the persistent bottom nav</td>
+        </tr>
+        <tr>
+          <td><strong>Entry</strong></td>
+          <td>CoNews event page</td>
+          <td>"See Community Posts" button on event detail</td>
+        </tr>
+        <tr>
+          <td><strong>Entry</strong></td>
+          <td>PropScan results</td>
+          <td>"Related Posts" section in scan results</td>
+        </tr>
+        <tr>
+          <td><strong>Entry</strong></td>
+          <td>Workshop guide / author profile</td>
+          <td>Tapping creator name links to Creator Hub profile</td>
+        </tr>
+        <tr>
+          <td><strong>Exit</strong></td>
+          <td>To CoNews</td>
+          <td>Tapping an event tag on a post</td>
+        </tr>
+        <tr>
+          <td><strong>Exit</strong></td>
+          <td>To Marketplace</td>
+          <td>Tapping an embedded product card</td>
+        </tr>
+        <tr>
+          <td><strong>Exit</strong></td>
+          <td>To Workshop</td>
+          <td>Tapping a linked guide tag on a post</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="fade-in">
+      <h3>Cross-Service Journey Example</h3>
+    <div class="fade-in">
+      <div class="card" style="margin-top: 1rem;">
+        <p style="color: var(--text-primary);"><strong>Scenario:</strong> Kai attends AFA Singapore 2026. He opens <strong>CoNews</strong> to check the event schedule. After the event, he taps "See Community Posts" on the AFA event page, which takes him to <strong>Creator Hub's event album</strong>. He creates a post, uploads photos, and <strong>PropScan</strong> suggests tags like "Nezuko" and "custom bamboo mouthpiece." His friend sees the post, taps the bamboo mouthpiece tag, and lands in <strong>Workshop</strong> to find a guide on making one. Another friend taps a tagged cosplay wig and lands in <strong>Marketplace</strong> to find similar items for sale.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 7: AI DESIGN ===== -->
+<section class="section" id="ai-design">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">07 / AI Interaction Design</div>
+      <h2 class="section-title">PropScan Tag Suggestions</h2>
+      <p class="section-subtitle">A non-intrusive AI feature that helps users tag their posts accurately, powered by PropScan's image recognition.</p>
+    </div>
+
+    <div class="fade-in">
+      <h3>The Feature</h3>
+      <p>When a user uploads images to a new post, PropScan analyzes the images and suggests relevant tags:</p>
+      <ul style="list-style: none; padding: 0;">
+        <li style="padding: 0.375rem 0; color: var(--text-secondary);">&#x2022; <strong>Character names</strong> (e.g., "Hatsune Miku", "Nezuko")</li>
+        <li style="padding: 0.375rem 0; color: var(--text-secondary);">&#x2022; <strong>Prop types</strong> (e.g., "wig", "weapon", "accessory")</li>
+        <li style="padding: 0.375rem 0; color: var(--text-secondary);">&#x2022; <strong>Event associations</strong> (if metadata matches a CoNews event)</li>
+      </ul>
+      <p>Tags appear as dismissible chips labeled "AI Suggested Tags (PropScan)" in the Create Post flow. The user retains full control — every suggestion can be accepted, modified, or dismissed.</p>
+    </div>
+
+    <div class="fade-in">
+      <h3>Why This Design?</h3>
+      <div class="quote">
+        <p>"Users respond more positively to non-intrusive, task-based AI than to recommendation-heavy AI."</p>
+        <cite>— Key Finding 5 from user research</cite>
+      </div>
+      <p>Our AI design follows three principles from the research:</p>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-label">User-triggered</div>
+          <p>AI only runs when images are uploaded. It doesn't push content or recommendations unprompted.</p>
+        </div>
+        <div class="card">
+          <div class="card-label">Task-oriented</div>
+          <p>It assists a concrete task (tagging) rather than vaguely "enhancing" the experience.</p>
+        </div>
+        <div class="card">
+          <div class="card-label">User-controlled</div>
+          <p>Every suggestion can be dismissed. Manual tag input remains available alongside AI suggestions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <h3>AI Interaction Flow</h3>
+    </div>
+
+    <div class="figma-embed fade-in">
+      <iframe style="border: none;" width="100%" height="500" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FRb3NBiOCgCPaXdcylqQa3L%2FPropbank-playground%3Fnode-id%3D287-3165" allowfullscreen loading="lazy"></iframe>
+      <p style="font-size: 0.8125rem; color: var(--text-muted); text-align: center; padding: 0.75rem;">Create Post — Step 2 of 3: showing AI Suggested Tags (PropScan) as dismissible chips alongside manual tags, collaborator tagging, and visibility controls</p>
+    </div>
+
+    <div class="fade-in">
+      <h3>Edge Cases</h3>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-label">No results</div>
+          <p>"No suggestions found. Add tags manually." The flow continues without friction.</p>
+        </div>
+        <div class="card">
+          <div class="card-label">Wrong suggestions</div>
+          <p>User dismisses incorrect tags with a tap. System can learn from rejections over time.</p>
+        </div>
+        <div class="card">
+          <div class="card-label">NSFW detection</div>
+          <p>PropScan flags potentially inappropriate images before posting, connecting to the moderation need identified in research.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 8: EVALUATION ===== -->
+<section class="section" id="evaluation">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">08 / Evaluation</div>
+      <h2 class="section-title">Evaluation</h2>
+      <p class="section-subtitle">Assessing the usability and effectiveness of the Creator Hub prototype.</p>
+    </div>
+
+    <div class="fade-in">
+      <h3>Usability Testing Approach</h3>
+      <p>We conducted <strong>unmoderated remote usability testing</strong> using <a href="https://maze.co" target="_blank">Maze</a>. Participants were given the interactive Figma prototype and asked to complete 4 task flows independently, with screen recordings captured throughout. After each task, participants responded to an emotional scale question. A summative satisfaction questionnaire was administered at the end of the session.</p>
+      <div class="card-grid" style="margin-top: 1.5rem;">
+        <div class="card">
+          <div class="card-label">Method</div>
+          <p>Unmoderated remote testing via Maze with self-administered tasks and screen recording</p>
+        </div>
+        <div class="card">
+          <div class="card-label">Participants</div>
+          <p>3 participants</p>
+        </div>
+        <div class="card">
+          <div class="card-label">Metrics</div>
+          <p>Task completion rate, time on task, emotional scale, summative satisfaction score</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <h3>Tasks Tested</h3>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-label">Task 1</div>
+          <h4>Create a New Post</h4>
+          <p>Try creating a new post. Images, tags, captions, etc. are all pre-selected for you — walk through the full post creation flow.</p>
+        </div>
+        <div class="card">
+          <div class="card-label">Task 2</div>
+          <h4>Search &amp; View Event Content</h4>
+          <p>Can you search "AFA Singapore 2026" and view the first post?</p>
+        </div>
+        <div class="card">
+          <div class="card-label">Task 3</div>
+          <h4>Save Post to Collection</h4>
+          <p>Can you save the first post in the feed to a collection?</p>
+        </div>
+        <div class="card">
+          <div class="card-label">Task 4</div>
+          <h4>View Creator Profile</h4>
+          <p>Can you open the profile of the creator of the first post in the feed?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <h3>Key Findings</h3>
+      <!-- CONTENT: Add insight-cards for each finding -->
+      <div class="insight-card">
+        <div class="insight-number">Finding 01</div>
+        <h4><!-- CONTENT: Finding title --></h4>
+        <p><!-- CONTENT: Finding description --></p>
+        <div class="so-what"><!-- CONTENT: Design change made --></div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-number">Finding 02</div>
+        <h4><!-- CONTENT: Finding title --></h4>
+        <p><!-- CONTENT: Finding description --></p>
+        <div class="so-what"><!-- CONTENT: Design change made --></div>
+      </div>
+
+      <div class="insight-card">
+        <div class="insight-number">Finding 03</div>
+        <h4><!-- CONTENT: Finding title --></h4>
+        <p><!-- CONTENT: Finding description --></p>
+        <div class="so-what"><!-- CONTENT: Design change made --></div>
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <h3>Changes Made Based on Evaluation</h3>
+      <!-- CONTENT: Add before/after comparisons if applicable -->
+      <p><!-- CONTENT: Summary of changes --></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 9: REFLECTION ===== -->
+<section class="section" id="reflection">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">09 / Reflection</div>
+      <h2 class="section-title">Reflection</h2>
+      <p class="section-subtitle">Looking back on the design process, decisions made, and lessons learned.</p>
+    </div>
+
+    <div class="placeholder-notice fade-in">
+      <p><strong>Coming Soon</strong></p>
+      <p>Reflections on the design process, AI usage, trade-offs, and learnings will be documented here.</p>
+      <p style="margin-top: 1rem; font-size: 0.8125rem;">Planned sections: Design Process Reflection &middot; AI in the Design Process &middot; Trade-offs &amp; Conflicts Resolved &middot; What I Would Do Differently</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p>Creator Hub — Individual Portfolio by Jae (Kim Jaehyeok) &middot; CS3240 AY2025/26 S2 &middot; T6 Group 5</p>
+  <p style="margin-top: 0.5rem;"><a href="https://www.figma.com/design/Rb3NBiOCgCPaXdcylqQa3L/Propbank-playground" target="_blank">Figma Prototype</a></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
